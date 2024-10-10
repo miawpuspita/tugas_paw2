@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
+router.get('/', function(req, res, next) {
   //   res.render('home', { title: 'Express', layout:'main' });
   const buku =[
       { 
           buku: "Si Kancil",
-          Cerita: "Tentang si kancil pintar dan bijak"
+          cerita: "Tentang si kancil pintar dan baijak"  
           
       },
       {
@@ -36,6 +36,11 @@ router.get('/buku' , function(req, res, next) {
     {NamaBuku: "Si Kembar", Penulis: "Critiano", Tahun: "2015"}
 ];
   res.render('buku',{title: 'halaman buku',daftarbuku, layout:'main'});
+});
+
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'halaman contact', layout: 'main' });
 });
 
 module.exports = router;
