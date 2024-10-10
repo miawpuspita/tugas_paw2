@@ -7,7 +7,7 @@ router.get('/home', function(req, res, next) {
   const buku =[
       { 
           buku: "Si Kancil",
-          Cerita: "Tentang si kancil pintar dan bijak"
+          cerita: "Tentang si kancil pintar dan bijak"
           
       },
       {
