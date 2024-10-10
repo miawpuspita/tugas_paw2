@@ -1,0 +1,7 @@
+<p>ini halaman home</p>
+    <h4>Daftar Buku</h4>
+    <% buku.forEach(data => { %>
+     <h5><%= data.buku %></h5>
+     <p><%= data.cerita %></p>
+     <button class="btn btn-primary">Selengkapnya</button>
+    <% }) %>
