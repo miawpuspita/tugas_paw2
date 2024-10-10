@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.get("/buku",(req, res)=>{
     const daftarbuku =[
         {NamaBuku: "Si Kancil", Penulis: "Eric", Tahun: "2006"},
-        {NamaBuku: "Maling Kundang", Penulis: "Nabila", Tahum: "2009"},
+        {NamaBuku: "Maling Kundang", Penulis: "Nabila", Tahun: "2008"},
         {NamaBuku: "Anak Pintar", Penulis: "Puspita", Tahun: "2010"},
         {NamaBuku: "Bawang merah", Penulis: "Angel", Tahun: "2011"},
         {NamaBuku: "Putri Duyung", Penulis: "Darren", Tahun: "2012"},
