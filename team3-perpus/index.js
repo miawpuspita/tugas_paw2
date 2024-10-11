@@ -22,3 +22,19 @@ app.get("/buku",(req, res)=>{
     ];
     res.render('buku',{title: 'halaman buku',daftarbuku,layout:'main'});
 });
+
+app.get("/bukus",(req, res)=>{
+    res.json({
+        "status" : "Success",
+        "message" : "Data Buku",
+        "data" : [{namabuku: "si kancil", penulis: "Eric Candra"},{namabuku: "malingkundang", penulis: "jovan"}]
+    })
+});
+
+app.use("/",(req, res)=>{
+    res.send("<h1>404 not found</h1>");
+});
+
+app.listen(port, ()=>{
+    console.log(`server dapat diakses di http://localhost:${port}`);
+});

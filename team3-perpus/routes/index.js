@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
   const buku =[
       { 
           buku: "Si Kancil",
-          cerita: "Tentang si kancil pintar dan baijak"  
+
+          cerita: "Tentang si kancil pintar dan bijak" 
           
       },
       {
@@ -39,8 +40,29 @@ router.get('/buku' , function(req, res, next) {
 });
 
 
+router.get("/bukus",(req, res)=>{
+  res.json({
+      "status" : "Success",
+      "message" : "Data Buku",
+      "data" : [{namabuku: "si kancil", penulis: "Eric Candra"},{namabuku: "malingkundang", penulis: "jovan"}]
+  })
+});
+
+router.get("/pinjam",(req, res)=>{
+  res.json({
+      "status" : "Success",
+      "message" : "Data Pinjam",
+      "data" : [{namaAnggota: "Eric Candra", tanggalPinjam: "11 oktober 2024"},{namaAnggota: "nabila", tanggalPinjam: "12 okctober 2024"}]
+  })
+});
+
+router.use("/",(req, res)=>{
+  res.send("<h1>404 not found</h1>");
+=======
+
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'halaman contact', layout: 'main' });
+
 });
 
 module.exports = router;
