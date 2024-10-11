@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/home', function(req, res, next) {
   //   res.render('home', { title: 'Express', layout:'main' });
   const buku =[
       { 
@@ -58,8 +58,7 @@ router.get("/pinjam",(req, res)=>{
 
 router.use("/",(req, res)=>{
   res.send("<h1>404 not found</h1>");
-=======
-
+});
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'halaman contact', layout: 'main' });
 
