@@ -39,6 +39,9 @@ router.get('/buku' , function(req, res, next) {
   res.render('buku',{title: 'halaman buku',daftarbuku, layout:'main'});
 });
 
+router.get("/contact", (req, res)=>{
+    res.render('contact',{title: 'halaman contact', layout:'main'});
+});
 
 router.get("/bukus",(req, res)=>{
   res.json({
@@ -56,12 +59,17 @@ router.get("/pinjam",(req, res)=>{
   })
 });
 
+router.get("/menghubungi",(req, res)=>{
+  res.json({
+      "status" : "Success",
+      "message" : "Data layanan",
+      "data" : [{nama: "Eric Candra", noHp: "0819312913"},{nama: "darren", nohp: "0813913912"}]
+  })
+});
+
 router.use("/",(req, res)=>{
   res.send("<h1>404 not found</h1>");
 });
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'halaman contact', layout: 'main' });
 
-});
 
 module.exports = router;
