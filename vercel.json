@@ -1,6 +1,0 @@
-{
-    "version": 2,
-    "name":"nodejs",
-    "builds":[{"src":"app.js","use":"@vercel/node"}],
-    "routers":[{"src":"/(.*)","dest":"/app.js"}]
-}
